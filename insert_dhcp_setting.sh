@@ -24,6 +24,6 @@ if [ -f  $NEW_INTERFACESD_FILENAME ]; then
 	echo "error: dhcp setting already existed"
 	exit 1
 fi
-echo -e "auto eth0\niface eth0 inet dhcp" > $NEW_INTERFACESD_FILENAME
+echo -e "auto ${INTERFACE_NAME}\niface ${INTERFACE_NAME} inet dhcp" > $NEW_INTERFACESD_FILENAME
 echo "success: complete proccess"
 exit 0
